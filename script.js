@@ -1,5 +1,5 @@
-function clearDisplay(){
-document.getElementById("display").value = ' '
+function clear_display(){
+document.getElementById("display").value = ''
 }
 function backspace() {
     const display = document.getElementById("display")
@@ -7,16 +7,16 @@ function backspace() {
 }
 function appendToDisplay(value) {
     const display = document.getElementById("display")
-    if (display.innerText === "0") {
-        display.innerText = value
+    //if (display.innerText === "0") {
+        display.value += value
     }
-    else {
-        display.innerText += value
-    }
-}
-function calculate() {
+    //else {
+        //display.innerText += value
+    //}
+//}
+function Calculate() {
     const display = document.getElementById("display")
-    if(display.innerText === "0") {
-        display.innerText = value
+        display.value = eval(display.value)
+       // console.log(eval(display.value))
     }
-}
+//}
